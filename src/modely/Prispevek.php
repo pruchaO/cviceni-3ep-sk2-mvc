@@ -75,5 +75,6 @@ class Prispevek
         $id = $_GET['id'];
         $dotaz = "DELETE FROM `php_mvc_prispevky` WHERE id = '$id'";
         $vysledek = mysqli_query($spojeni, $dotaz);
+        header("location:index.php?c=prispevky&a=prehled");
     }
 }
