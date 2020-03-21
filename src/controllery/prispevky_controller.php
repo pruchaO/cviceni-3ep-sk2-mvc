@@ -42,4 +42,10 @@ class PrispevkyController
 
         require_once "viewy/prispevky/prehled.php";
     }
+    public function smazat()
+    {
+        $id = $_GET["id"];
+        $prispevek = Prispevek::smazat($id);
+        
+    }
 }

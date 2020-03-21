@@ -69,4 +69,11 @@ class Prispevek
 
         return $prispevky;
     }
+    static public function smazat($id)
+    {
+        $spojeni = DB::pripojit();
+        $id = $_GET['id'];
+        $dotaz = "DELETE FROM `php_mvc_prispevky` WHERE id = '$id'";
+        $vysledek = mysqli_query($spojeni, $dotaz);
+    }
 }
