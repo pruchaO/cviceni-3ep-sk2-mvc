@@ -17,7 +17,7 @@ class Prispevek
     {
         $spojeni = DB::pripojit();
 
-        $dotaz = "INSERT INTO 3ep_sk2_php_mvc_prispevky (nadpis, obsah) VALUES ('$nadpis', '$obsah')";
+        $dotaz = "INSERT INTO php_mvc_prispevky (nadpis, obsah) VALUES ('$nadpis', '$obsah')";
         $vysledek = mysqli_query($spojeni, $dotaz);
 
         if($vysledek)
@@ -30,7 +30,7 @@ class Prispevek
     {
         $spojeni = DB::pripojit();
 
-        $dotaz = "SELECT * FROM 3ep_sk2_php_mvc_prispevky WHERE id = '$id'";
+        $dotaz = "SELECT * FROM php_mvc_prispevky WHERE id = '$id'";
         $vysledek = mysqli_query($spojeni, $dotaz);
         
         if(mysqli_num_rows($vysledek))
@@ -53,7 +53,7 @@ class Prispevek
     {
         $spojeni = DB::pripojit();
 
-        $dotaz = "SELECT * FROM 3ep_sk2_php_mvc_prispevky";
+        $dotaz = "SELECT * FROM php_mvc_prispevky";
         $vysledek = mysqli_query($spojeni, $dotaz);
 
         $prispevky = [];
