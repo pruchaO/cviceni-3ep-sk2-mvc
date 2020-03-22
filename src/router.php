@@ -31,7 +31,8 @@ $controllery = array(
         "detail",
         "chyba",
         "prehled",
-        "smazat"
+        "smazat",
+        "edit"
     ),
 );
 

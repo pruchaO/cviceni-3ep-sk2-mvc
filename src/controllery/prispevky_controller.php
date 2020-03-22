@@ -48,4 +48,10 @@ class PrispevkyController
         $prispevek = Prispevek::smazat($id);
         
     }
+    public function edit()
+    {
+        $id = $_GET["id"];
+        $prispevek = Prispevek::smazat($id);
+        require_once "viewy/prispevky/edit.php";
+    }
 }
