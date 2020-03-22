@@ -77,4 +77,8 @@ class Prispevek
         $vysledek = mysqli_query($spojeni, $dotaz);
         header("location:index.php?c=prispevky&a=prehled");
     }
+    static public function edit($id)
+    {
+
+    }
 }
