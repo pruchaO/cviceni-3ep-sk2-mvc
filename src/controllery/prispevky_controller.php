@@ -49,12 +49,7 @@ class PrispevkyController
         
     }
     public function edit()
-    {
-        $id = $_GET["id"];
-        $nadpis = trim($_POST["nadpis"]);
-        $obsah = trim($_POST["obsah"]);
-        $prispevek = Prispevek::edit($id, $nadpis, $obsah);
-        
+    {   
         require_once "viewy/prispevky/edit.php";
     }
 }
