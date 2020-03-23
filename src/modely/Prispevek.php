@@ -79,12 +79,12 @@ class Prispevek
     }
     static public function edit()
     {
-
+        
         $spojeni = DB::pripojit();
-        $_GET["id"] = $prispevek->id;
+        $id = $_GET['id'];
         $nadpis = $_POST["nadpis"];
         $obsah = $_POST["obsah"];
-        $dotaz = "UPDATE php_mvc_prispevky SET nadpis = '$nadpis' obsah = '$obsah' WHERE id = '$id'";
+        $dotaz = "UPDATE `php_mvc_prispevky` SET nadpis = '$nadpis', obsah = '$obsah' WHERE id = '$id'";
 
         $vysledek = mysqli_query($spojeni, $dotaz);
         
