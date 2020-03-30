@@ -54,9 +54,9 @@ class PrispevkyController
     }
     public function editace()
     {
+        $id = $_GET["id"];
         $nadpis = trim($_POST["nadpis"]);
         $obsah = trim($_POST["obsah"]);
-        $id = $_GET["id"];
         $prispevek = Prispevek::edit($id,$nadpis,$obsah);
     }
 }

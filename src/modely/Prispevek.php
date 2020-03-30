@@ -77,10 +77,13 @@ class Prispevek
         $vysledek = mysqli_query($spojeni, $dotaz);
         header("location:index.php?c=prispevky&a=prehled");
     }
-    static public function edit()
+    static public function edit($id,$nadpis,$obsah)
     {
-       
         
+        $spojeni = DB::pripojit();
+        $dotaz = "UPDATE `php_mvc_prispevky` SET nadpis = '$nadpis' obsah = '$obsah' WHERE id = '$id'";
+        $vysledek = mysqli_query($spojeni, $dotaz);
+        header("location:index.php?c=prispevky&a=prehled");
     }
     
     
