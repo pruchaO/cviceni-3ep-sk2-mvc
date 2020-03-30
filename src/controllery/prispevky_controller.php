@@ -50,8 +50,8 @@ class PrispevkyController
     }
     public function edit()
     {   
-        $id = $_GET["id"];
-        $prispevek = Prispevek::edit($id);
+        //$id = $_GET["id"];
+        //$prispevek = Prispevek::edit($id);
         require_once "viewy/prispevky/edit.php";
     }
 }
