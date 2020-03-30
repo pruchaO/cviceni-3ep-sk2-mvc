@@ -2,6 +2,7 @@
 
 class PrispevkyController
 {
+
     public function pridani()
     {
         require_once "viewy/prispevky/pridani.php";
@@ -50,8 +51,15 @@ class PrispevkyController
     }
     public function edit()
     {   
-        $id = $_GET["id"];
-        $prispevek = Prispevek::edit($id);
         require_once "viewy/prispevky/edit.php";
+        $idE = $_GET["id"];
+        $_SESSION["idE"] = $idE;
+    }
+    public function editace()
+    {
+        $id = $_SESSION["idE"];
+        $nadpis = trim($_POST["nadpis"]);
+        $obsah = trim($_POST["obsah"]);
+        $prispevek = Prispevek::edit($id,$nadpis,$obsah);
     }
 }
